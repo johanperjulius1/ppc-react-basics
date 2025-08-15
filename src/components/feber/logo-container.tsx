@@ -1,4 +1,3 @@
-import Image from 'next/image';
 
 interface LogoObject {
     logoTitle: string;
@@ -18,7 +17,7 @@ export default function LogoContainer({ logoObject }: LogoProps) {
     const logoPath = `/images/logos/${logoTitle}/${logoName}`;
     return (
         <div style={{ backgroundColor }}>
-            <Image width={width} height={height} src={logoPath} alt={altText} />
+            <img width={width} height={height} src={logoPath} alt={altText} />
         </div>
     );
 }

@@ -1,14 +1,16 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Toplist from "@/components/toplist/toplist";
+import { casinosByRating } from "@/lib/casinos-data";
 
-const Index = () => {
+export default function Index() {
+  const dateDay = new Date().getDate().toString();
+  const dateMonth = new Date().toLocaleString('default', { month: 'long' });
+  const dateYear = new Date().getFullYear();
+
+  const defaultSubtitle = `Bonusarna uppdaterades den ${dateDay} ${dateMonth} ${dateYear}`;
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
-};
-
-export default Index;
+    <>
+      {defaultSubtitle}
+      <Toplist casinos={casinosByRating} />
+    </>
+  )
+}
