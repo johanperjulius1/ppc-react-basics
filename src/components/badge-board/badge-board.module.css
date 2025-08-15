@@ -1,0 +1,60 @@
+.badges-container {
+    background-color: #efefef;
+    border-radius: var(--bd-rad-sm);
+    display: flex;
+    font-size: 12px;
+    font-weight: 300;
+    gap: 7px;
+    grid-area: BADGES;
+    height: 55px;
+    justify-content: space-evenly;
+    margin:4px 5px 0px 5px;
+    padding: 6px;
+    @media (min-width: 992px){
+        flex-direction: column;
+        height: 100%;
+        max-width:55px;
+        margin: 0;
+    }
+  }
+
+.badges-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.badges-container div img {
+    display: block;
+    margin-left: 12px
+}
+
+.badges-container div span {
+    display: block;
+    font-size: 12px;
+}
+
+.pale {
+    opacity: 0.3;
+    position: relative;
+}
+
+.pale::after {
+    content: "X";
+    color: red;
+    font-size: 20px;
+    position: absolute;
+    top: 13px;
+    right: 19px;
+    transform: translate(50%, -50%);
+    background-color: #efefef;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+@media (min-width: 992px) {
+    .pale::after {
+        top: 2px;
+        right: 25px; /* Change this to your desired color */
+    }
+}

@@ -1,0 +1,25 @@
+ .play-now {
+    background-color: #57ea03;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    padding: 10px;
+    padding: 25px 20px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .review {
+    padding: 6px;
+    width: 100%;
+    border: 1px solid #2980b9;
+    border-radius: .4375rem;
+    font-size: 14px;
+    text-align: center;
+    color: #2980b9;
+    font-weight: 500;
+    text-decoration: none;
+  }

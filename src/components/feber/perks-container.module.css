@@ -1,0 +1,8 @@
+.perks-item {    
+    align-items: center;
+    background: #efefef;
+    display: flex;
+    font-size: 13px;
+    font-weight: 600;
+    justify-content: center;
+}
