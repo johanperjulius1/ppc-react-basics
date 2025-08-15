@@ -1,5 +1,5 @@
-import Toplist from "@/components/toplist/toplist";
-import { casinosByRating } from "@/lib/casinos-data";
+import Toplist from "@/components/toplist/toplist"
+import { casinosByRating } from "@/lib/casinos-data"
 
 export default function Index() {
   const dateDay = new Date().getDate().toString();
@@ -9,6 +9,7 @@ export default function Index() {
   const defaultSubtitle = `Bonusarna uppdaterades den ${dateDay} ${dateMonth} ${dateYear}`;
   return (
     <>
+      <h1>hello</h1>
       {defaultSubtitle}
       <Toplist casinos={casinosByRating} />
     </>
