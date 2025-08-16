@@ -1,0 +1,10 @@
+/* Apply box-sizing globally to all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Reset margin and padding for html and body to remove default browser spacing */
+html, body {
+  margin: 0;
+  padding: 0;
+}
