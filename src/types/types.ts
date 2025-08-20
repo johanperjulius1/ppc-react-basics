@@ -26,8 +26,8 @@ export interface Casino {
     height: number
   };
   rating: number;
-  bonusAmount:number;
-  freeSpins: number;
+  bonusAmount: number;
+  freeSpins: number | string;
   excerpt: string;
   positive1: string;
   positive2: string;

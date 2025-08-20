@@ -11,7 +11,11 @@ export default function Index() {
     <>
       <h1>hello</h1>
       {defaultSubtitle}
-      <Toplist casinos={casinosByRating} />
+      <Toplist
+        casinos={casinosByRating}
+        title="Bästa Casinona"
+        subtitle={defaultSubtitle}
+      />
     </>
   )
 }

@@ -21,7 +21,7 @@ const App = () => (
         <Route path="/casino-med-bonus" element={<CasinoMedBonus />} />
         <Route path="/casino-med-bonus-utan-omsattningskrav" element={<CasinoMedBonusUtanOmsattningskrav />} />
         <Route path="/casino-med-free-spins" element={<CasinoMedFreeSpins />} />
-        <Route path="/casino-med-free-spins-utan-krav" element={<CasinoMedFreeSpinsUtanKrav />} />
+        <Route path="/casino-med-free-spins-utan-omsattningskrav" element={<CasinoMedFreeSpinsUtanKrav />} />
         <Route path="/casino-med-bankid" element={<CasinoMedBankId />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
