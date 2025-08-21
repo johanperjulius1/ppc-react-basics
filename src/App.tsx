@@ -9,6 +9,7 @@ import CasinoMedBonusUtanOmsattningskrav from "./pages/CasinoMedBonusUtanOmsattn
 import CasinoMedFreeSpins from "./pages/CasinoMedFreeSpins";
 import CasinoMedFreeSpinsUtanKrav from "./pages/CasinoMedFreeSpinsUtanKrav";
 import CasinoMedBankId from "./pages/CasinoMedBankId";
+import BotOptimized from "./pages/BotOptimized";
 
 const App = () => (
   <BrowserRouter>
@@ -23,6 +24,7 @@ const App = () => (
         <Route path="/casino-med-free-spins" element={<CasinoMedFreeSpins />} />
         <Route path="/casino-med-free-spins-utan-omsattningskrav" element={<CasinoMedFreeSpinsUtanKrav />} />
         <Route path="/casino-med-bankid" element={<CasinoMedBankId />} />
+        <Route path="/bot-optimized" element={<BotOptimized />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>

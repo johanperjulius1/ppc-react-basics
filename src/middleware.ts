@@ -52,6 +52,49 @@ export function getCookies(): { isBot?: string; isDirectTraffic?: string } {
   };
 }
 
+// Funktion för att redirecta bots OCH direct traffic till optimized sida
+export function redirectBotOrDirectTrafficIfNeeded(): boolean {
+  const userAgentInfo = analyzeUserAgent();
+  
+  // Kontrollera om vi redan är på bot-optimized sidan
+  const currentPath = window.location.pathname;
+  if (currentPath === '/bot-optimized') {
+    return false; // Redan på rätt sida
+  }
+  
+  // Redirecta både bots OCH direct traffic
+  if (userAgentInfo.isBot || userAgentInfo.isDirectTraffic) {
+    // Lägg till query parameters för att spåra varifrån redirecten kom
+    const fromPath = encodeURIComponent(currentPath);
+    const reason = userAgentInfo.isBot ? 'bot' : 'direct';
+    window.location.href = `/bot-optimized?from=${fromPath}&reason=${reason}`;
+    return true; // Redirect genomförd
+  }
+  
+  return false; // Ingen redirect
+}
+
+// Behåll gamla funktionen för bakåtkompatibilitet
+export function redirectBotIfNeeded(): boolean {
+  const userAgentInfo = analyzeUserAgent();
+  
+  // Kontrollera om vi redan är på bot-optimized sidan
+  const currentPath = window.location.pathname;
+  if (currentPath === '/bot-optimized') {
+    return false; // Redan på rätt sida
+  }
+  
+  // Redirecta bara bots, inte vanliga användare
+  if (userAgentInfo.isBot) {
+    // Lägg till query parameter för att spåra varifrån redirecten kom
+    const fromPath = encodeURIComponent(currentPath);
+    window.location.href = `/bot-optimized?from=${fromPath}`;
+    return true; // Redirect genomförd
+  }
+  
+  return false; // Ingen redirect
+}
+
 // Huvudfunktion som kombinerar allt
 export function processUserAgent(): UserAgentInfo {
   const userAgentInfo = analyzeUserAgent();
